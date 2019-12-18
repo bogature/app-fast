@@ -1,0 +1,7 @@
+.idea
+*.pyc
+*.bak
+*.bat
+venv
+venv2
+__pycache__
