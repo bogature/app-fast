@@ -72,7 +72,7 @@ def create_word(w: CreateWord):
 
 
 @app.put("/words/{word_id}", response_model=Words)
-def edit_task(word_id, w: EditWord):
+def edit_words(word_id, w: EditWord):
     new_word = {
         'id': word_id,
         'word': w.word,
@@ -83,6 +83,6 @@ def edit_task(word_id, w: EditWord):
 
 
 @app.delete("/words/{word_id}", response_model=List[Words], status_code=201)
-def delete_task(word_id: int):
+def delete_words(word_id: int):
     words = list(filter(lambda t: t['id'] != word_id, my_words))
     return words
